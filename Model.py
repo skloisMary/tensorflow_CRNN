@@ -245,8 +245,7 @@ class CRNN(object):
         saver_path = tf.train.latest_checkpoint(self.checkpoint_dir)
 
         #
-        # test_sample_count = NUM_EXAMPLES_PER_EPOCH - int(RATIO * NUM_EXAMPLES_PER_EPOCH)
-        test_sample_count = int(RATIO * NUM_EXAMPLES_PER_EPOCH)
+        test_sample_count = NUM_EXAMPLES_PER_EPOCH - int(RATIO * NUM_EXAMPLES_PER_EPOCH)
         step_num = test_sample_count // self.batch_size
         print('iteration:', step_num)
 
